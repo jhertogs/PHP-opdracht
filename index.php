@@ -1,8 +1,10 @@
 <?php 
 $naam = ""; $land = "";
- include_once("form.php") 
+function keepselect($selectedland){
+    $land = "";
+    if($land == $selectedland){echo "selected";}
+}
  ?>
-
 <!DOCTYPE html>
 <html lang="en"> </html>
 <head> 
@@ -11,7 +13,6 @@ $naam = ""; $land = "";
     <title> PHP opdracht - vertaler</title>
 </head>
 <body>
-
     <form method="post" action="">
         Naam: <input type="text" name="naam" placeholder="Uw naam" value="<?php if(isset($_POST["land"])){echo $_POST["naam"];}  ?>" required /><br/>
         Land: 
@@ -27,7 +28,7 @@ $naam = ""; $land = "";
         <br/>
         <input type="submit" name="submit" value="gegevens versturen"/>
 </form>
-
+<?php include_once("form.php")  ?>
 </body>
 </html>
 

@@ -27,8 +27,5 @@ switch($land){
 }
 }
 
-function keepselect($selectedland){
-    $land = "";
-    if($land == $selectedland){echo "selected";}
-}
+
 ?>
