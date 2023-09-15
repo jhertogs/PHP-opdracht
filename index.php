@@ -1,4 +1,7 @@
-<?php  include_once("form.php") ?>
+<?php 
+$naam = ""; $land = "";
+ include_once("form.php") 
+ ?>
 
 <!DOCTYPE html>
 <html lang="en"> </html>
@@ -14,12 +17,12 @@
         Land: 
         <select name="land">
             <option value="Keuze">Maak uw keuze</option>
-            <option value="NL" <?php if($land == "NL"){echo "selected";}?>>Nederland</option>
-            <option value="DE" <?php if($land == "DE"){echo "selected";}?>>Duitsland</option>
-            <option value="EN" <?php if($land == "EN"){echo "selected";}?>>Engeland</option>
-            <option value="FR" <?php if($land == "FR"){echo "selected";}?>>Frankrijk</option>
-            <option value="ES" <?php if($land == "ES"){echo "selected";}?>>Spanje</option>
-            <option value="IT" <?php if($land == "IT"){echo "selected";}?>>Italie</option>
+            <option value="NL" <?php keepselect("NL"); ?>>Nederland</option>
+            <option value="DE" <?php keepselect("DE");?>>Duitsland</option>
+            <option value="EN" <?php keepselect("EN"); ?>>Engeland</option>
+            <option value="FR" <?php keepselect("FR"); ?>>Frankrijk</option>
+            <option value="ES" <?php keepselect("ES"); ?>>Spanje</option>
+            <option value="IT" <?php keepselect("IT"); ?>>Italie</option>
         </select>
         <br/>
         <input type="submit" name="submit" value="gegevens versturen"/>
