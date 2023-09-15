@@ -11,30 +11,32 @@
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     $naam = $_POST["naam"];
     $land = $_POST["land"];
-    if($land=='NL'){
+    
+switch($land){
+    case "NL":
         echo 'Goedemorgen ' .$naam;
-    }
-    elseif($land=='DE'){
-        echo 'guten morgen '.$naam;
-
-    }
-    elseif($land=='EN'){
-        echo 'Good morning '.$naam;
-    }
-    elseif($land=='FR'){
-        echo 'bonjour '.$naam;
-    }
-    elseif($land=='ES'){
-        echo 'Buen día '.$naam;
-    }
-    elseif($land=='IT'){
-        echo 'Buongiorno '.$naam;
-    }
-    elseif($land=='Keuze'){
-        echo '<span style="color:#fa0000;"> Selecteer eerst een land! </span>';
-    }
-
+        break;
+    case "EN":
+        echo 'Good morning ' .$naam;
+        break;
+    case "FR":
+        echo 'bonjour ' .$naam;
+        break;
+    case "ES":
+        echo 'buen dia ' .$naam;
+        break;
+    case "IT":
+        echo 'buongiorno ' .$naam;
+        break;
+    case "DE":
+        echo 'guten morgen ' .$naam;
+        break;
+    case "Keuze":
+        echo '<span style="color:#fa0000;"> Selecteer eerst een land! </span> ';
 }
+}
+
+
 
 ?>
     <form method="post" action="">
